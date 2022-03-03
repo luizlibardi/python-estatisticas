@@ -5,6 +5,8 @@ import pandas as pd
 dados = pd.read_csv('./files/dados.csv')
 
 n = dados.shape[0]
+
+# Formula para gerar classes de acordo com a quantidade de valores no dataframe
 k = 1 + (10/3) * np.log10(n)
 print(int(k.round(0)))
 
