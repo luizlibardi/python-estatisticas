@@ -2,7 +2,6 @@ import pandas as pd
 
 dados = pd.read_csv('./files/dados.csv')
 
-df = pd.DataFrame(dados)
 
 # Variaveis qualitativas ordinais - Podem ser ordenadas ou hierarquizadas
 print(sorted(dados['Anos de Estudo'].unique()))
