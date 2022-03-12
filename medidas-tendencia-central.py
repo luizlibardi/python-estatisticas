@@ -1,6 +1,7 @@
+# Medidas de Tendencia Central
+
 import pandas as pd
 
-# Medidas de Tendencia Central
 dados = pd.read_csv('files/dados.csv')
 
 df = pd.DataFrame(data = {'Fulano': [8, 10, 4, 8, 6, 10, 8],
@@ -15,21 +16,44 @@ df = pd.DataFrame(data = {'Fulano': [8, 10, 4, 8, 6, 10, 8],
                           'Química'])
 df.rename_axis('Matérias', axis = 'columns', inplace = True)
 
-# print(df)
+
+#### ==== MEDIA ==== ####
+
+#print(df)
 
 media = (8 + 10 + 4 + 8 + 6 + 10 + 8) / 7
 # print(media)
-# print(df.Fulano.mean())
+df.Fulano.mean()
 
-# print(dados.groupby(['Sexo'])['Renda'].mean())
+dados.groupby(['Sexo'])['Renda'].mean()
 
-
+# Exercicio
 dataset = pd.DataFrame({
     'Sexo': ['H', 'M', 'M', 'M', 'M', 'H', 'H', 'H', 'M', 'M'],
     'Idade': [53, 72, 54, 27, 30, 40, 58, 32, 44, 51]
 })
 
-print(dataset.groupby(['Sexo'])['Idade'].mean())
+# print(dataset.groupby(['Sexo'])['Idade'].mean())
 
-print(dataset.Idade.mean())
+# print(dataset.Idade.mean())
+
+#### ==== MEDIANA ==== ####
+
+notas_fulano = df.Fulano
+notas_fulano = notas_fulano.sort_values()
+notas_fulano = notas_fulano.reset_index()
+
+n = notas_fulano.shape[0]
+elemento_md = (n + 1) / 2
+
+# print(notas_fulano.loc[elemento_md -1])
+
+# print(notas_fulano.median())
+
+notas_beltrano = df.Beltrano
+notas_beltrano.median()
+dados.Renda.median()
+dados.Renda.quantile()
+
+#### ==== MODA ==== ####
 
