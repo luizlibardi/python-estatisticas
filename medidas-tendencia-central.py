@@ -57,3 +57,19 @@ dados.Renda.quantile()
 
 #### ==== MODA ==== ####
 
+print(df.mode())
+# Multi Modal -> Tem mais de uma Moda
+
+print(dados.Renda.mode())
+print(dados.Altura.mode())
+
+"""
+#### ==== Relação entre Media Mediana e Moda ==== ####
+    
+    Assimetrico a esqueda ->   Moda < Mediana < Media
+
+    Simetrico ->   Moda = Mediana = Media
+
+    Assimetrico a direita ->   Moda > Mediana > Media
+
+"""
