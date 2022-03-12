@@ -15,13 +15,21 @@ df = pd.DataFrame(data = {'Fulano': [8, 10, 4, 8, 6, 10, 8],
                           'Química'])
 df.rename_axis('Matérias', axis = 'columns', inplace = True)
 
-print(df)
+# print(df)
 
 media = (8 + 10 + 4 + 8 + 6 + 10 + 8) / 7
 # print(media)
-print(df.Fulano.mean())
+# print(df.Fulano.mean())
 
-print(dados.groupby(['Sexo'])['Renda'].mean())
+# print(dados.groupby(['Sexo'])['Renda'].mean())
 
-# Media aritimetica -> Mais precisa
+
+dataset = pd.DataFrame({
+    'Sexo': ['H', 'M', 'M', 'M', 'M', 'H', 'H', 'H', 'M', 'M'],
+    'Idade': [53, 72, 54, 27, 30, 40, 58, 32, 44, 51]
+})
+
+print(dataset.groupby(['Sexo'])['Idade'].mean())
+
+print(dataset.Idade.mean())
 
