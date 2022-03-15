@@ -1,7 +1,7 @@
 # Medidas Separatrizes
 import pandas as pd
 
-# Quartis, Decis e Percentis
+## Quartis, Decis e Percentis
 
 dados = pd.read_csv('files/dados.csv')
 
